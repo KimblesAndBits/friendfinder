@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class=container>
+        <div class="jumbotron">
+            <h1 class="display-4">Friend Finder!</h1>
+            <p class="lead">Here is your survey, answer honestly!</p>
+            <hr class="my-4">
+            <p>Enter your name, choose a password and input a URL for your photo, then answer the questions.</p>
+        </div>
+        <div class=row>
+            <div class=col-md-12>
+                <div class="input-group input-group-lg">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Name</span>
+                    </div>
+                    <input type="text" class="form-control" id="name-input" aria-label="Name input">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Password</span>
+                    </div>
+                    <input type="text" class="form-control" id="password-input" aria-label="Password input">
+                </div>
+            </div>
+        </div>
+        <div class=row>
+            <div class=col-md-12>
+                <div class="input-group input-group-lg">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Photo URL</span>
+                    </div>
+                    <input type="text" class="form-control" id="photo-url-input" aria-label="Photo URL input">
+                </div>
+            </div>
+        </div>
+        <div class=row>
+            <div class=col-md-3>
+                <p>1) I love music.</p>
+                <div class="btn-group btn-group-toggle" id=question-1 data-toggle="buttons">
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=1 autocomplete="off"> 1
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=2 autocomplete="off"> 2
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=3 autocomplete="off"> 3
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=4 autocomplete="off"> 4
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=5 autocomplete="off"> 5
+                    </label>
+                </div>
+            </div>
+            <div class=col-md-3>
+                <p>2) I love TV.</p>
+                <div class="btn-group btn-group-toggle" id=question-2 data-toggle="buttons">
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=1 autocomplete="off"> 1
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=2 autocomplete="off"> 2
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=3 autocomplete="off"> 3
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=4 autocomplete="off"> 4
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=5 autocomplete="off"> 5
+                    </label>
+                </div>
+            </div>
+            <div class=col-md-3>
+                <p>3) I love movies.</p>
+                <div class="btn-group btn-group-toggle" id=question-3 data-toggle="buttons">
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=1 autocomplete="off"> 1
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=2 autocomplete="off"> 2
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=3 autocomplete="off"> 3
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=4 autocomplete="off"> 4
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=5 autocomplete="off"> 5
+                    </label>
+                </div>
+            </div>
+            <div class=col-md-3>
+                <p>4) I love going out with friends.</p>
+                <div class="btn-group btn-group-toggle" id=question-4 data-toggle="buttons">
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=1 autocomplete="off"> 1
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=2 autocomplete="off"> 2
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=3 autocomplete="off"> 3
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=4 autocomplete="off"> 4
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=5 autocomplete="off"> 5
+                    </label>
+                </div>
+            </div>
+            <div class=col-md-3>
+                <p>5) I love staying in with friends.</p>
+                <div class="btn-group btn-group-toggle" id=question-5 data-toggle="buttons">
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=1 autocomplete="off"> 1
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=2 autocomplete="off"> 2
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=3 autocomplete="off"> 3
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=4 autocomplete="off"> 4
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=5 autocomplete="off"> 5
+                    </label>
+                </div>
+            </div>
+            <div class=col-md-3>
+                <p>6) I am religious.</p>
+                <div class="btn-group btn-group-toggle" id=question-6 data-toggle="buttons">
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=1 autocomplete="off"> 1
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=2 autocomplete="off"> 2
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=3 autocomplete="off"> 3
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=4 autocomplete="off"> 4
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=5 autocomplete="off"> 5
+                    </label>
+                </div>
+            </div>
+            <div class=col-md-3>
+                <p>7) I love animals.</p>
+                <div class="btn-group btn-group-toggle" id=question-7 data-toggle="buttons">
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=1 autocomplete="off"> 1
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=2 autocomplete="off"> 2
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=3 autocomplete="off"> 3
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=4 autocomplete="off"> 4
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=5 autocomplete="off"> 5
+                    </label>
+                </div>
+            </div>
+            <div class=col-md-3>
+                <p>8) I love playing video games.</p>
+                <div class="btn-group btn-group-toggle" id=question-8 data-toggle="buttons">
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=1 autocomplete="off"> 1
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=2 autocomplete="off"> 2
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=3 autocomplete="off"> 3
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=4 autocomplete="off"> 4
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=5 autocomplete="off"> 5
+                    </label>
+                </div>
+            </div>
+            <div class=col-md-3>
+                <p>9) I am very intersted in politics.</p>
+                <div class="btn-group btn-group-toggle" id=question-9 data-toggle="buttons">
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=1 autocomplete="off"> 1
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=2 autocomplete="off"> 2
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=3 autocomplete="off"> 3
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=4 autocomplete="off"> 4
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=5 autocomplete="off"> 5
+                    </label>
+                </div>
+            </div>
+            <div class=col-md-3>
+                <p>10) I really like to eat new foods.</p>
+                <div class="btn-group btn-group-toggle" id=question-10 data-toggle="buttons">
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=1 autocomplete="off"> 1
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=2 autocomplete="off"> 2
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=3 autocomplete="off"> 3
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=4 autocomplete="off"> 4
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" value=5 autocomplete="off"> 5
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class=row>
+            <div class=col-md-12>
+                <button type="button" id=submit-button class="btn btn-primary btn-lg">Submit</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
