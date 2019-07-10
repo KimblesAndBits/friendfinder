@@ -4,9 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Friend Finder - Survey</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -15,6 +12,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
             <hr class="my-4">
             <p>Enter your name, choose a password and input a URL for your photo, then answer the questions.</p>
         </div>
-        <div class=row>
+        <div class="row name-pass-row">
             <div class=col-md-12>
                 <div class="input-group input-group-lg">
                     <div class="input-group-prepend">
@@ -39,7 +39,7 @@
                 </div>
             </div>
         </div>
-        <div class=row>
+        <div class="row photo-row">
             <div class=col-md-12>
                 <div class="input-group input-group-lg">
                     <div class="input-group-prepend">
@@ -49,7 +49,7 @@
                 </div>
             </div>
         </div>
-        <div class=row>
+        <div class="row survey-row">
             <div class=col-md-3>
                 <p>1) I love music.</p>
                 <div class="btn-group btn-group-toggle" id=question-1 data-toggle="buttons">
@@ -111,7 +111,7 @@
                 </div>
             </div>
             <div class=col-md-3>
-                <p>4) I love going out with friends.</p>
+                <p>4) I love going out.</p>
                 <div class="btn-group btn-group-toggle" id=question-4 data-toggle="buttons">
                     <label class="btn btn-info">
                         <input type="radio" name="options" value=1 autocomplete="off"> 1
@@ -131,7 +131,7 @@
                 </div>
             </div>
             <div class=col-md-3>
-                <p>5) I love staying in with friends.</p>
+                <p>5) I love staying in.</p>
                 <div class="btn-group btn-group-toggle" id=question-5 data-toggle="buttons">
                     <label class="btn btn-info">
                         <input type="radio" name="options" value=1 autocomplete="off"> 1
@@ -191,7 +191,7 @@
                 </div>
             </div>
             <div class=col-md-3>
-                <p>8) I love playing video games.</p>
+                <p>8) I love video games</p>
                 <div class="btn-group btn-group-toggle" id=question-8 data-toggle="buttons">
                     <label class="btn btn-info">
                         <input type="radio" name="options" value=1 autocomplete="off"> 1
@@ -211,7 +211,7 @@
                 </div>
             </div>
             <div class=col-md-3>
-                <p>9) I am very intersted in politics.</p>
+                <p>9) I like politics.</p>
                 <div class="btn-group btn-group-toggle" id=question-9 data-toggle="buttons">
                     <label class="btn btn-info">
                         <input type="radio" name="options" value=1 autocomplete="off"> 1
@@ -231,7 +231,7 @@
                 </div>
             </div>
             <div class=col-md-3>
-                <p>10) I really like to eat new foods.</p>
+                <p>10) I like new foods.</p>
                 <div class="btn-group btn-group-toggle" id=question-10 data-toggle="buttons">
                     <label class="btn btn-info">
                         <input type="radio" name="options" value=1 autocomplete="off"> 1
@@ -251,7 +251,7 @@
                 </div>
             </div>
         </div>
-        <div class=row>
+        <div class="row submit-button-row">
             <div class=col-md-12>
                 <button type="button" id=submit-button class="btn btn-primary btn-lg">Submit</button>
             </div>
@@ -261,3 +261,31 @@
 </body>
 
 </html>
+
+<style>
+    * {
+        justify-content: center;
+        text-align: center;
+    }
+    .submit-button-row {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .survey-row {
+        border: 1px solid black;
+        padding-top: 2rem;
+        padding-right: 1rem;
+    }
+    .survey-row, .photo-row, .name-pass-row {
+        padding-bottom: 2rem;
+    }
+    .btn-group {
+        padding-bottom: 1rem;
+    }
+    .col-md-3 {
+        width: auto;
+    }
+    p {
+        font-size: .9rem;
+    }
+</style>
