@@ -5,4 +5,5 @@ var friends = [
         password: "password123",
         scores: [5, 5, 3, 1, 5, 1, 2, 5, 4, 4]
     }
-]
+];
+module.exports.friends = { friends };
