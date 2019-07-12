@@ -299,6 +299,7 @@
                 newScores.push(parseInt($(`#choice-${i}`).val()));
             };
         };
+        if (newName && newPass && newPhoto && newScores.length === 10) {
         var newFriend = new Friend(newName, newPass, newPhoto, newScores);
         $.post("/api/friends", newFriend).then(data => {
             $.get("/api/friends").then(data => {
@@ -307,6 +308,10 @@
                 $("#match-modal").modal();
             });
         });
+        } else {
+            $("#match-name").text("You missed some required fields.");
+            $("#match-photo").attr("src", "");
+        };
     });
 </script>
 
