@@ -1,7 +1,8 @@
 var friends = require("./../data/friends").friends.friends;
 module.exports = (app) => {
     app.get("/api/friends", (req, res) => {
-        var you = req.body;
+        var you = friends[friends.length - 1];
+        console.log(you);
         var match;
         var matchNumber = 40;
         friends.forEach(element => {
