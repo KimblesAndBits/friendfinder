@@ -259,22 +259,19 @@
     </div>
     <div class="modal fade" id="match-modal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="match-name"></h5>
-              <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button> -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="match-name"></h5>
+                </div>
+                <div class="modal-body">
+                    <img style="width: 25rem" id="match-photo">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Close</button>
+                </div>
             </div>
-            <div class="modal-body">
-              <img id="match-photo">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Close</button>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 </body>
 
 </html>
@@ -291,8 +288,11 @@
 
     $("#submit-button").on("click", function () {
         var newName = $("#name-input").val();
+        $("#name-input").val("");
         var newPass = $("#password-input").val();
+        $("#password-input").val("");
         var newPhoto = $("#photo-url-input").val();
+        $("#photo-url-input").val("");
         var newScores = [];
         for (var i = 1; i < 51; i++) {
             if ($(`#choice-${i}`).prop("checked") === true) {

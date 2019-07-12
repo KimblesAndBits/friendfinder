@@ -15,7 +15,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-        <script src="/app/data/friends.js"></script>
 </head>
 
 <body>
@@ -43,10 +42,44 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="match-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="match-name"></h5>
+                    </div>
+                    <div class="modal-body">
+                        <img style="width: 25rem" id="match-photo">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
 </html>
+
+<script>
+    $("#submit-button").on("click", function () {
+        var you = $("#name-input").val();
+        var pass = $("#password-input").val();
+        $.get(`/api/friends/${you}`).then(data => {
+            if (data[0].password === pass) {
+                $("#match-name").text(data[1].name);
+                $("#match-photo").attr("src", data[1].photo);
+                $("#match-modal").modal();
+            } else {
+                $("#match-name").text("Your password or name is incorrect.");
+                $("#match-photo").attr("src", "https://media1.s-nbcnews.com/j/newscms/2018_40/2593976/181005-stock-sorry-sign-ew-1147a_72f1ab820a37e2770f57cfc477861d35.fit-2000w.jpg");
+                $("#match-modal").modal();
+            }
+        });
+
+    });
+</script>
 
 <style>
     * {
